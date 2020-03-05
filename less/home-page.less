@@ -1,81 +1,92 @@
 // home
 
-.firstsection{
-	display: flex;
+.firstsection {
+	.flex-layout(center,center);
 	flex-direction: column;
-	background-color: @section_one_color;
-	height: 404px;
-	width: 100%;
-	color:white;
-	margin-top: 6%;
+	height: 100vh;
+	margin-top: 3%;
+	background-image: url("/saltyhackers/imgs/saltHero.jpg");
+	background-position: bottom;
 
-	.saltygirl{
-		
-		margin-top: -20px;
-	}
-	
-
-	.salty_text{
-		margin-top: 40px;
+	.salty_text {
+		margin-top: 3%;
 		border-radius: 50%;
-		font-weight:bold;
-		padding: 0 6%;
-	}
-
-	@media @phone {
-	.salty_text{
-		margin-top: -6%;
-	}
-
-}
-
-	.salty_girl{
-		border-radius: 50px;
-
-		@media @phone {
-			margin-top: 10px;
+		padding: 6% 6%;
+		width: 75%;
+		background-color: rgba(57, 103, 173, .5);
+		h2 {
+			border-bottom: 2px solid #AD7F39;
 		}
-
+		h4{
+			margin-top: 1%;
+		}
 	}
-}
 
-.secondsection{
-	background-color: #00D1B2;
-	height: 404px;
-	width: 100%;
-	color:white;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-
-@media @phone {
-	.salty_text2{
-		display:none;
+	.app-button {
+		.flex-layout(center, center);
 	}
-}
-	.salty_text2{
-		color: white;
-		width: 80%;
-		padding: 0 2%;
-		height: 200px;
-		opacity: 0.4;
-		border-radius: 20px;
-		background-color: black;
-	}
-}
 
-button.tryit{
-		width: 80% !important;
-		background-color: #FF3860;
-		color: white;
+	button {
+		width: 50%;
+		background-color: #AD7F39;
+		color: @white;
 		font-size: 1.8rem;
 		border-radius: 20px;
 		padding: 5px;
 		margin-bottom: 10px;
+		&:hover{
+			background-color: @backdrop-color;
+		}
 	}
+}
 
-footer{
-	.centerText();
-	margin-top: 50px;
-	font-size: 1.4rem;
+.secondsection {
+	.flex-layout(space-evenly, center);
+	flex-direction: column;
+	width: 90%;
+	margin-left: 5%;
+
+	.salty_header {
+		color: @white;
+		width: 100%;
+		padding: 2%;
+		margin: 3%;
+		height: 125px;
+		border-radius: 20px;
+		background-color: @blue;
+
+		h2 {
+			border-bottom: 2px solid @backdrop-color
+		}
+		
+		button {
+			margin-top: 1%;
+			background-color: @blue;
+			color: @white;
+			border-radius: 20px;
+			padding: 5px;
+			&:hover{
+				background-color: @backdrop-color;
+			}
+		}
+	}
+	.comment {
+		width: 80%;
+		background-color: @blue;
+		border-radius: 20px;
+		height: 125px;
+		color: @white;
+		padding: 2%;
+		margin-bottom: 3%;
+		h3 {
+			border-bottom: 2px solid @backdrop-color;
+		}
+		&:nth-child(2n) {
+			background-color: @white;
+			color: @backdrop-color;
+			h3{
+				border-bottom: 2px solid @accent;
+			}
+		}
+	}
 }
