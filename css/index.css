@@ -272,6 +272,14 @@ header h1 {
   align-items: flex-end;
   border-bottom: 1px solid #363636;
 }
+.info .person #about-links {
+  display: flex;
+  flex-direction: column;
+}
+.info .person #about-links a {
+  display: flex;
+  align-items: center;
+}
 .info .img {
   display: flex;
   justify-content: center;
@@ -360,6 +368,11 @@ footer {
 .firstsection .salty_text h4 {
   margin-top: 1%;
 }
+@media (max-width: 500px) {
+  .firstsection .salty_text {
+    border-radius: 5%;
+  }
+}
 .firstsection .app-button {
   display: flex;
   justify-content: center;
@@ -425,4 +438,9 @@ footer {
 }
 .secondsection .comment:nth-child(2n) h3 {
   border-bottom: 2px solid #AD7F39;
+}
+@media (max-width: 500px) {
+  .secondsection .comment {
+    width: 95%;
+  }
 }
